@@ -111,6 +111,38 @@
             </tbody>
         </table>
 
+    
+    <!-- inputs and forms -->
+        <input type="text" placeholder="Enter Name">
+        <input type="password" placeholder='Enter Password' id="password" >
+        <span id="eyeButton">Eye</span>
+        <input type="number">
+        <input type="file">
+        <input type="checkbox">
+        <input type="date">
+        <input type="radio">
+        <input type="email">
+
+        <select>
+            <option value="">Jaipur</option>
+            <option value="">Udaipur</option>
+            <option value="">Kota</option>
+        </select>
+
+        <textarea id="" cols="30"></textarea>
+        <input type="search">
+        <input type="button" value="submit">
+        <button>submit</button>
+
+
+        <script>
+            document.getElementById('eyeButton').addEventListener('click', function() {
+                document.getElementById('password').type = "text";
+                console.log("hii")
+            })
+        </script>
+
+
 
 
 </body>
