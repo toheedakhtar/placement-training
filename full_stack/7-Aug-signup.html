@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create an Account</title>
+</head>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    }
+
+    header{
+        height: 10vh;
+        background-color: #4b6ca9;
+    }
+
+    main{
+        padding: 5px;
+        height: 70vh;
+        background-color: #e3eaef;
+    }
+
+    footer {
+        height: 20vh;
+        /* background-color: ; */
+    }
+
+    .header-div {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .main-div{
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        margin-left: 50vw;
+        margin-right: 20vw;   
+        gap: 5px;     
+    }
+
+    main > div > input {
+        padding: 10px;
+        margin: 5px 0;
+        border-radius: 5px;
+        border: 1px solid rgb(164, 164, 164);
+    }
+
+    h3 {
+        color: rgb(60, 60, 60);
+        font-weight: 400;
+    }
+
+    h1 {
+        color: rgb(49, 49, 49);
+    }
+
+    #name {
+        margin-top: 10px;
+        margin: 5px 0;
+    }
+
+    #name > input {
+        padding: 10px;
+        border: 1px solid rgb(164, 164, 164);
+
+    }
+
+    #create-btn {
+        background-color: #52dd52;
+        width: 15vw;
+        height: 4vh;
+        border-radius: 5px;
+        color: white;
+        font-weight: 800;
+    }
+
+    #login-btn{
+        margin: 30px 6px;
+    }
+
+    .header-item{
+        display: flex;
+        flex-direction: column;
+        margin: 10px 5px;
+        color: white;
+    }
+
+    h5{
+        padding: 5px 0;
+    }
+
+</style>
+
+<body>
+
+    <header>
+        <div class="header-div">
+            <div class="header-item">
+                <h5>Email or Phone</h5>
+                <input type="email">
+            </div>
+            <div class="header-item">
+                <h5>Password</h5>
+                <input type="password">
+                <h5>forgotten password?</h5>
+            </div>
+
+            <button type="submit" id="login-btn">Login</button>
+        </div>
+    </header>
+
+    <main>
+        
+        <div class="main-div">
+            <h1>Create an account</h1>
+            <h3>It's free and always will be</h3>
+
+            <div id="name">
+                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="Surname">
+            </div>
+                
+            <input type="email" placeholder="Mobile number or email">
+            <input type="password" placeholder="New password">
+
+            <h3>Birthday</h3>
+            <input type="date">
+            <!-- <input type="radio" value="Male">Male -->
+             Female Male
+
+
+            <button type="submit" id="create-btn">Create an account</button>
+            Create a page for celebrity, band or buisness
+        </div>
+
+    </main>
+
+    <footer>
+        Signup login Messegner Dotnettec mobile Find Freinds BAdges People places Games<br>
+        Locations celebrities Groups messages moments about Create advert Create page Developers Carrers Privacy Cookies<br>
+        Ads Terms help
+
+    </footer>
+
+</body>
+</html>
