@@ -21,12 +21,17 @@
     main{
         padding: 5px;
         height: 70vh;
-        background-color: #e3eaef;
+        background-color: #e2e9ee;
     }
 
     footer {
         height: 20vh;
-        /* background-color: ; */
+        word-spacing: 20px;
+        color: rgba(0, 0, 255, 0.483);
+        line-height: 3vh;
+        margin: 2vh 15vw;
+        font-size: small;
+        font-weight: 600;
     }
 
     .header-div {
@@ -50,6 +55,11 @@
 
     .main-div > span > input {
         margin: 0 5px;
+    }
+
+    .main-div > p {
+        color: grey;
+        font-size: small;
     }
 
     main > div > input {
@@ -152,9 +162,12 @@
             <input type="date">
 
             <span>
-                <input type="radio" value="Male">Male<input type="radio" value="Female">Female
+                <input type="radio" value="Male">Female<input type="radio" value="Female">Male
             </span>
 
+            <p>By clicking create an account, you agree our terms and that<br>
+            you have read our Data policy and Cookie use</p>
+            <br>
             <button type="submit" id="create-btn">Create an account</button>
             Create a page for celebrity, band or buisness
         </div>
