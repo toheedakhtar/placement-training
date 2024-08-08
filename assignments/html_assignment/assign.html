@@ -4,11 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML assignment</title>
+
+    <style>
+        td, tr, th {
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
 </head>
 <body>
 
-    <h1>Q.1 - Create a static web page that defines all text formatting tags of HTML in tabular format</h1>
+    <div id="q1">
+        <h3>Q.1 - Create a static web page that defines all text formatting tags of HTML in tabular format</h3>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>tags</th>
+                    <th>text formatting</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>
+                        bold / &lt;b&gt; 
+                    </td>
+                    <td>
+                        <b> this is bold text formatting</b>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>italic / &lt;i&gt; </td><td><i>This is italic text formatting</i></td>
+                </tr>
+
+                <tr>
+                    <td>underline</td><td><u>This is underline text formatting</u></td>
+                </tr>
+
+                <tr>
+                    <td>superscipt</td><td>This is <sup>superscipt text formatting</sup></td>
+                </tr>
+
+                <tr>
+                    <td>subscript</td><td>This is <sub>subscript text formatting</i></sub>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+    <hr>
+
+    <div id="q2">
+        <h3>Q.2 Create a student admission form for the college webpage using HTML form objects. (include a select tag for the chosen stream).
+            note: The form should ask all the necessary questions using appropriate form elements
+        </h3>
+
+        <h5>Student admission form</h5>
+        <form action="../../html/7-Aug-signup.html">
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Surname">
+            <input type="email" placeholder="Enter your emai">
+            <br>
+            <input type="text" placeholder="10th percentage">
+            <input type="file" placeholder="10th percentage" value="10th marksheet">
+            <br>
+            <input type="text" placeholder="12th percentage" name="12">
+            <input type="file" placeholder="12th percentage" value="12th marksheet">
+            <br>
+            <input type="number" placeholder="aadhaar number">
+            <br>
+            <input type="text" placeholder="enter Mobile number">
+            <br>
+            <button type="submit">Submit form</button>
+        </form>
+
+    </div>
+
+    <hr>
+
+    <div id="q3">
+
+        <h3>Q.3 - Develop a simple personal profile webpage using HTML to introduce yourself, your interests, and Education </h3>
+        <a href="https://toheedakhtar.github.io/takhtar">Personal profile page</a>
+    </div>
+
+    <hr>
+
+    <div id="q3">
+        <h3>Q.3 - HTML tags like &lt;a&gt; can have certain attributes. The href attribute is mandatory in the <a> tag. Additionally, it is possible to use the title attribute which specifies a text that emerges when the mouse cursor is moved above a link. This kind of text is called a tool tip. Modify the link that you created in the previous exercise so that a tooltip says "Explore Exciting Adventures!." when the mouse cursor is over the link.</h3>
+
+        <a href="https://toheedakhtar.github.io/takhtar" title="Explore Exciting Adventures!.">text</a>
+    </div>
     
-    
+    <hr>
+
+
 </body>
 </html>
