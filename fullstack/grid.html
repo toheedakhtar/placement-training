@@ -17,12 +17,28 @@
             display: grid;
             /* grid-template-columns: repeat(auto-fill, 100px); */
             grid-template-columns: repeat(3, 1fr);      /*fr = fraction*/
-            gap: 10px;
+            gap: 20px;
+            grid-template-rows: 1fr 1fr 1fr;
         }
 
         .box{
             background-color: cornflowerblue;
             border: 2px solid cadetblue;
+        }
+
+        #box-1 {
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+            /* grid-column: 1 / span 1; for coulmn only */
+        }
+        
+        #box-3{
+            /* grid-row-start: 2;
+            grid-row-end: 4; */
+        }
+
+        #box-4{
+            /* grid-area: 2 / 2/ 4 / 5;  row start, row end, coloumn start, column end */
         }
 
     </style>
