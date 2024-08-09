@@ -17,18 +17,19 @@
             height: 70vh;
             display: flex;
             gap: 0px; /* gives space b/w elements unlike parent-child in margin, padding*/
-            flex-flow: wrap column;
+            flex-flow: wrap row;
 
-            justify-content: flex-end;  /* x axis or main axis */
-            align-items: flex-end;    /* y axis or cross axis*/
+            justify-content: center;  /* x axis or main axis */
+            align-items: center;    /* y axis or cross axis*/
+            align-content: center; /* controls space bw flex lines on cross/y axis*/
         }
 
         .box {
             border: 1px solid cadetblue;
-            width: 100px;
+            width: 150px;
         }
-
     </style>
+
 </head>
 <body>
 
