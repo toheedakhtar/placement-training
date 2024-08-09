@@ -16,10 +16,11 @@
             border: 1px solid red;
             height: 70vh;
             display: flex;
-            /* flex-direction: row;
-            flex-wrap: wrap; */
-            gap: 20px; /* gives space b/w elements unlike parent-child in margin, padding*/
-            flex-flow: wrap row;
+            gap: 0px; /* gives space b/w elements unlike parent-child in margin, padding*/
+            flex-flow: wrap column;
+
+            justify-content: flex-end;  /* x axis or main axis */
+            align-items: flex-end;    /* y axis or cross axis*/
         }
 
         .box {
@@ -38,6 +39,8 @@
         <div class="box" id="box-3">BOX 1</div>
         <div class="box" id="box-4">BOX 1</div>
         <div class="box" id="box-5">BOX 1</div>
+        <div class="box" id="box-6">BOX 1</div>
+        <div class="box" id="box-6">BOX 1</div>
         <div class="box" id="box-6">BOX 1</div>
         <div class="box" id="box-7">BOX 1</div>
 
