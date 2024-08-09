@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            border: 1px solid red;
+            height: 70vh;
+            display: flex;
+            /* flex-direction: row;
+            flex-wrap: wrap; */
+            gap: 20px; /* gives space b/w elements unlike parent-child in margin, padding*/
+            flex-flow: wrap row;
+        }
+
+        .box {
+            border: 1px solid cadetblue;
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!--  .container>.box#box-$(Box-$)*8  -->
+    <div class="container">
+        <div class="box" id="box-1">BOX 1</div>
+        <div class="box" id="box-2">BOX 1</div>
+        <div class="box" id="box-3">BOX 1</div>
+        <div class="box" id="box-4">BOX 1</div>
+        <div class="box" id="box-5">BOX 1</div>
+        <div class="box" id="box-6">BOX 1</div>
+        <div class="box" id="box-7">BOX 1</div>
+
+
+    </div>
+
+    
+</body>
+</html>
