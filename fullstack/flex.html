@@ -10,14 +10,15 @@
         *{
             margin: 0;
             padding: 0;
+            box-sizing: border-box;     /* dosent count border or padding */
         }
 
         .container {
             border: 1px solid red;
             height: 70vh;
-            display: flex;
             gap: 0px; /* gives space b/w elements unlike parent-child in margin, padding*/
-            /* flex-flow: wrap row; */
+            display: flex;
+            flex-flow: wrap row;
 
             /* justify-content: center;  x axis or main axis */
             /* align-items: center;    y axis or cross axis */
@@ -27,17 +28,19 @@
         .box {
             border: 1px solid cadetblue;
             width: 100px;
-
+            /* shortand for flex grow , flex shrink and flex basis*/
+            flex: 0 1 25%;
         }
 
         #box-1{
-            flex-grow: 1;
+            /* flex-grow: 1; */
         }
 
         #box-5{
             /* order: 1; */
             /* flex-grow: 2; */
-            flex-shrink: 2;
+            /* flex-shrink: 2; */
+
         }
 
         #box-4{
