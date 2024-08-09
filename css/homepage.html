@@ -4,39 +4,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dream Center</title>
+    
+    <!-- fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    
+    <!-- css  -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        navbar {
+            height: 10vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bolder;
+        }
+
+        navbar > div > select {
+            border: white;
+            font-size: medium;
+            font-weight: bold;
+        }
+
+        main {
+            font-family: "Poppins", sans-serif;
+            color: white;
+            background-image: url('./homepage_img.jpg');
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        footer{
+            /* height: 13vh; */
+            background-color: #fff7da;
+        }
+
+        #footer-links{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 10vh;
+            margin-left: 2vw;
+            margin-right: 2vw;
+
+        }
+
+        #donate-btn{
+            background-color: red;
+            font-weight: bold;
+            padding: 2vh 2vw;
+            color: white;
+            border: red;
+            font-size: large;
+        }
+
+       #logo{
+            width: 40vw;
+            margin-left: 2vw;
+            display: flex;
+            gap: 0 10px;
+        }
+ 
+        #nav-links{
+            margin-right: 7vw;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 60vw;
+        }
+
+        #main-content {
+            line-height: 4vh;
+        }
+
+        #footer-links > span > input {
+            padding: 1vw 1vw;
+            font-size: medium;
+            border: none;
+        }
+
+        #footer-links > span > button {
+            background-color: powderblue;
+            color: white;
+            font-weight: bold;
+            padding: 1vw 3vw;
+            font-size: medium;
+            border: none;
+            border-radius: 3px;
+        }
+
+    </style>
+
 </head>
 <body>
     
     <navbar>
-        <div>dream center<br>something</div>
-        <div>
-            HOME
-            WHAT WE DO
+        <div id="logo">
+            <img src="" width="50" height="50">
+            <span>
+                <h2>dream center</h2><h4>something</h4>
+            </span>
+        </div>
+
+        <div id="nav-links">
+            <a href="">HOME</a>
             <select>
                 <option>WHAT WE DO</option>
                 <option>other</option>
             </select>
-            ABOUT US
+           
+            <a href="">ABOUT US</a>
             
             <select>
                 <option>CONTACTS</option>
                 <option>other</option>
             </select>
-            
-            <button id="donate-btn">Donate now</button>
+            <div>
+                <button id="donate-btn">Donate now</button>
+            </div>
         </div>
+        
+
     </navbar>
     
     <main>
-        <h1>Making More<br>of Every Gift</h1>
-        <h3>No child should be forgotten</h3>
-        <button id="wt-we-do-btn">WHAT WE DO</button>
+        <div id="main-content">
+            <h1>Making More<br>of Every Gift</h1>
+            <h3>No child should be forgotten</h3>
+            <button id="wt-we-do-btn">WHAT WE DO</button>
+        </div>
     </main>
 
     <footer>
-        Sign Up & Stay Connected
-        <input type="email" placeholder="Enter your email">
-        <button>SUBSCRIBE</button>
+        <div id="footer-links">
+            <h2>Sign Up & Stay Connected</h2>
+            <span>
+                <input type="email" placeholder="Enter your email">
+                <button>SUBSCRIBE</button>
+            </span>
+        </div>
     </footer>
 
 </body>
