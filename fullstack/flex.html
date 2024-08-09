@@ -17,17 +17,33 @@
             height: 70vh;
             display: flex;
             gap: 0px; /* gives space b/w elements unlike parent-child in margin, padding*/
-            flex-flow: wrap row;
+            /* flex-flow: wrap row; */
 
-            justify-content: center;  /* x axis or main axis */
-            align-items: center;    /* y axis or cross axis*/
-            align-content: center; /* controls space bw flex lines on cross/y axis*/
+            /* justify-content: center;  x axis or main axis */
+            /* align-items: center;    y axis or cross axis */
+            /* align-content: center; controls space bw flex lines on cross/y axis */
         }
 
         .box {
             border: 1px solid cadetblue;
-            width: 150px;
+            width: 100px;
+
         }
+
+        #box-1{
+            flex-grow: 1;
+        }
+
+        #box-5{
+            /* order: 1; */
+            /* flex-grow: 2; */
+            flex-shrink: 2;
+        }
+
+        #box-4{
+            /* order: 2; */
+        }
+
     </style>
 
 </head>
@@ -36,14 +52,14 @@
     <!--  .container>.box#box-$(Box-$)*8  -->
     <div class="container">
         <div class="box" id="box-1">BOX 1</div>
-        <div class="box" id="box-2">BOX 1</div>
-        <div class="box" id="box-3">BOX 1</div>
-        <div class="box" id="box-4">BOX 1</div>
-        <div class="box" id="box-5">BOX 1</div>
-        <div class="box" id="box-6">BOX 1</div>
-        <div class="box" id="box-6">BOX 1</div>
-        <div class="box" id="box-6">BOX 1</div>
-        <div class="box" id="box-7">BOX 1</div>
+        <div class="box" id="box-2">BOX 2</div>
+        <div class="box" id="box-3">BOX 3</div>
+        <div class="box" id="box-4">BOX 4</div>
+        <div class="box" id="box-5">BOX 5</div>
+        <div class="box" id="box-6">BOX 6</div>
+        <div class="box" id="box-7">BOX 7</div>
+        <div class="box" id="box-8">BOX 8</div>
+        <div class="box" id="box-9">BOX 9</div>
 
 
     </div>
