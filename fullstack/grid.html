@@ -16,9 +16,14 @@
             height: 500px;
             display: grid;
             /* grid-template-columns: repeat(auto-fill, 100px); */
-            grid-template-columns: repeat(3, 1fr);      /*fr = fraction*/
-            gap: 20px;
-            grid-template-rows: 1fr 1fr 1fr;
+            /* grid-template-columns: repeat(3, 1fr);      /*fr = fraction*/
+            /* gap: 20px;
+            grid-template-rows: 1fr 1fr 1fr; */ 
+
+            grid-template-areas: "hdr hdr hdr hdr",
+                                  "sbr main main main"
+                                  "sbr main main main"
+                                  "ftr ftr ftr ftr"  ;
         }
 
         .box{
@@ -27,6 +32,7 @@
         }
 
         #box-1 {
+            grid-area: hdr ;
             /* grid-column-start: 1;
             grid-column-end: 3; */
             /* grid-column: 1 / span 1; for coulmn only */
@@ -38,6 +44,7 @@
         }
 
         #box-4{
+            /* grid-area: ftr; */
             /* grid-area: 2 / 2/ 4 / 5;  row start, row end, coloumn start, column end */
         }
 
@@ -51,11 +58,11 @@
         <div class="box" id="box-2">BOX 2</div>
         <div class="box" id="box-3">BOX 3</div>
         <div class="box" id="box-4">BOX 4</div>
-        <div class="box" id="box-5">BOX 5</div>
+        <!-- <div class="box" id="box-5">BOX 5</div>
         <div class="box" id="box-6">BOX 6</div>
         <div class="box" id="box-7">BOX 7</div>
         <div class="box" id="box-8">BOX 8</div>
-        <div class="box" id="box-9">BOX 9</div>
+        <div class="box" id="box-9">BOX 9</div> -->
     </div>
 
 </body>

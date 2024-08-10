@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psuedo</title>
+
+    <style>
+
+        /* pseudo classes */
+
+        #google:visited{
+            background-color: black;
+            padding: 50px;
+        }
+
+        #container {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+
+        #container:hover {
+            height: 200px;
+            width: 200px;
+            background-color: cadetblue;
+        }
+
+        #container:active {    /*active -> clikced*/
+            height: 200px;
+            width: 200px;
+            background-color: blue;
+        }
+
+        #container:visited {    /*active -> clikced*/
+            height: 200px;
+            width: 200px;
+            background-color: cornflowerblue;
+        }
+
+        /* ul li:first-child{
+            background-color: blueviolet;
+        }
+
+        ul li:last-child{
+            background-color: blueviolet;
+        } */
+
+        /* an + b */
+        ul li:nth-child(2n){
+            background-color: gray
+        }
+
+        #para::selection{
+            background-color: red;
+        }
+
+        #para::first-letter{
+            background-color: aqua;
+        }
+
+        #para:hover::after{
+            content: 'heloo techno';
+            background-color: rgb(228, 228, 170);
+        }
+
+        
+        #para::before{
+            content: 'heloo techno';
+            background-color: rgb(231, 0, 0);
+        }
+
+    </style>
+
+</head>
+<body>
+    <!-- pseudo classes and elements -->
+    <!-- pseudo classes : hover, active, visited, first child, last child, nth chidl -->
+    <!-- pseudo elements : first line, first letter , before , after , selecton -->
+
+    <a href="" id="google">
+        Google
+    </a>
+
+    <div id="container">
+        container
+    </div>
+
+    <ul>
+        <li>Item1</li>
+        <li>Item2</li>
+        <li>Item3</li>
+        <li>Item4</li>
+        <li>Item5</li>
+        <li>Item6</li>
+        <li>Item7</li>
+        
+    </ul>
+
+    <p id="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat a eum hic consequatur cum delectus aut dignissimos, ducimus nemo vel maiores tenetur expedita, dolores dolor quidem eligendi laudantium quia aperiam sint tempore, nam numquam in debitis! Perferendis beatae qui incidunt iure provident iste ipsum at possimus deleniti fuga ducimus, aperiam odit modi quis, expedita consequatur similique dolor deserunt sint cum nostrum eligendi adipisci numquam. Maiores unde non vitae nulla, eum aliquam ducimus. Quasi itaque quaerat dolor excepturi saepe maiores nesciunt commodi nemo laborum ratione voluptates non totam dolorem repellendus molestias, suscipit autem deleniti soluta velit laboriosam corrupti laudantium ab explicabo!</p>
+
+</body>
+</html>
