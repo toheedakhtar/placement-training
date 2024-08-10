@@ -29,7 +29,7 @@
         .container {
             display: grid;
             height: 90vh;
-            grid-template-rows: 750px 400px 800px 500px 800px 400px 900px;
+            grid-template-rows: 750px 400px 800px 500px 800px 400px 500px;
         }
 
         #div-1{
@@ -53,6 +53,12 @@
         #div-7{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .side-image {
+            background-image: url('https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/aaba845edc7551f0bcfd5265/pexelsphoto925743.jpeg'); 
+            object-fit: cover;
+            background-position: 50% 25%;
         }
 
 
@@ -103,8 +109,9 @@
 
             <div id="div-7">
                 <div style="background-image: url('https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/01eaf52937a55d8e8d81acd2/pexelsphoto771742.jpeg');"><h2>photo1</h2></div>
-                <div><h2>photo2</h2></div>
-                <div><h2>photo3</h2></div>
+                <div style="background-image: url('https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/8e0c842e8a5b5b2c882bdd55/pexelsphoto1570779.jpeg');"><h2>photo2</h2></div>
+                <div class="side-image"><h2>photo3</h2></div>
+                
             </div>
 
         </div>
