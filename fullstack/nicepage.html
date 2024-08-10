@@ -11,12 +11,14 @@
             box-sizing: border-box;
         }
 
+
         header {
             position: sticky;
             top: 0;
             left: 0;
             background-color: rgb(185, 185, 185);
             height: 7vh;
+            width: 100%;
         }
 
         .header-div {
@@ -25,17 +27,25 @@
             justify-content: space-between;
         }
 
+        main{
+            height: 100%;
+            width: 100%;
 
+        }
+        
         .container {
+            width: 100vw;
             display: grid;
             height: 90vh;
-            grid-template-rows: 750px 400px 800px 500px 800px 400px 500px;
+            grid-template-rows: 750px 400px 800px 500px 800px 400px 500px 600px 100px;
         }
 
         #div-1{
             background-image: url(https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/311ebf9ec39a5c1f8b8241af/pexelsphoto1927507.jpeg);
-            /* height: 80vh; */
+            color: white;
+            font-family: sans-serif;
         }
+
 
         #div-2-about , #div-6 {
             background-color: #7da2a9;
@@ -58,9 +68,19 @@
         .side-image {
             background-image: url('https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/aaba845edc7551f0bcfd5265/pexelsphoto925743.jpeg'); 
             object-fit: cover;
-            background-position: 50% 25%;
+            background-position: 7% -88%;
         }
 
+        #div-8{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        #div-9 {
+            background-color: #333333;
+            color: white;
+            text-align: center;
+        }
 
     </style>
 </head>
@@ -84,11 +104,13 @@
         <div class="container">
             
             <div id="div-1">
-                div 1
+                <div style="font-size: 3em; padding: 2rem 11rem;"><h1>ART</h1></div>
+                <div style="font-size: 6em; padding: 22rem 23rem;"><h1>SCHOOL</h1></div>
             </div>
 
             <div id="div-2-about">
                 div2
+                
             </div>
 
             <div id="div-3-programs">
@@ -111,7 +133,15 @@
                 <div style="background-image: url('https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/01eaf52937a55d8e8d81acd2/pexelsphoto771742.jpeg');"><h2>photo1</h2></div>
                 <div style="background-image: url('https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/8e0c842e8a5b5b2c882bdd55/pexelsphoto1570779.jpeg');"><h2>photo2</h2></div>
                 <div class="side-image"><h2>photo3</h2></div>
-                
+            </div>
+
+            <div id="div-8">
+                <div style="background-color: #7da2a9;"><h3>Questions</h3><h3>Questions</h3><h3>Questions</h3></div>
+                <div style="background-color: #18181e;"><h3>Questions</h3><h3>Questions</h3><h3>Questions</h3></div>
+            </div>
+
+            <div id="div-9">
+                <p>created by and copied from https://nicepage.com/website-builder-software/preview/school-of-artistic-education-34007?device=desktop</p>
             </div>
 
         </div>
