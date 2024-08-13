@@ -60,3 +60,16 @@ var date = new Date();
 
 var b = null
 console.log(typeof(b))
+
+
+let c= 12;  // can be reassigned but can't be reinit / redeclared
+c = 13;
+console.log(c)
+
+const d = 111;  // const can't be redeclared or reassigned
+d = 112
+console.log(d)
+
+
+
+
