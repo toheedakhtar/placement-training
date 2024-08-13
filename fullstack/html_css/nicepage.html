@@ -9,16 +9,17 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: sans-serif;
         }
 
 
         header {
             position: sticky;
             top: 0;
-            left: 0;
+            /* left: 0; */
             background-color: rgb(185, 185, 185);
             height: 7vh;
-            width: 100%;
+            width: 100vw;
         }
 
         .header-div {
@@ -27,25 +28,42 @@
             justify-content: space-between;
         }
 
-        main{
-            height: 100%;
-            width: 100%;
-
-        }
-        
         .container {
             width: 100vw;
             display: grid;
             height: 90vh;
-            grid-template-rows: 750px 400px 800px 500px 800px 400px 500px 600px 100px;
+            grid-template-rows: 750px 400px 1000px 500px 800px 400px 500px 600px 100px;
         }
 
         #div-1{
             background-image: url(https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/311ebf9ec39a5c1f8b8241af/pexelsphoto1927507.jpeg);
+            background-size: cover;
+            background-position: center;
             color: white;
             font-family: sans-serif;
         }
 
+        /* #div-1-text > h3{
+            font-size: 7vh;
+            padding:5vh 0;
+        }
+
+        #div-1-text > h1{
+            font-size: 17vh;
+        }
+
+        #div-1-text{
+            margin:0vh 5vw;
+            padding: 0 0 ;
+        } */
+
+        #div-2-about {
+            display: grid;
+            grid-template-columns: 0.5fr 0.5fr;
+            align-items: center;
+            justify-items: center;
+            padding: 5vh 5vw;
+        }
 
         #div-2-about , #div-6 {
             background-color: #7da2a9;
@@ -54,6 +72,21 @@
 
         #div-3-programs {
             background-color: #ffffff;
+            color: black;
+        }
+
+        #div-3-head{
+            padding:3vh 20vw;
+        }
+
+        .div-3-pitems{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding : 5vh 1vw;
+        }
+
+        .div-3-pitems-box{
+            padding: 1vh 1vw;
         }
 
         #div-4{
@@ -62,7 +95,7 @@
 
         #div-7{
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 33vw 33vw 33vw;
         }
 
         .side-image {
@@ -73,7 +106,7 @@
 
         #div-8{
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 50vw 50vw;
         }
 
         #div-9 {
@@ -100,53 +133,103 @@
         </div>
     </header>
 
-    <main>
-        <div class="container">
-            
-            <div id="div-1">
-                <div style="font-size: 3em; padding: 2rem 11rem;"><h1>ART</h1></div>
-                <div style="font-size: 6em; padding: 22rem 23rem;"><h1>SCHOOL</h1></div>
+    <div class="container">
+        
+        <div id="div-1">
+            <div id="div-1-text">
+                <h3>ART</h3>
+                <h1>SCHOOL</h1>
             </div>
-
-            <div id="div-2-about">
-                div2
-                
-            </div>
-
-            <div id="div-3-programs">
-                div-3
-            </div>
-
-            <div id="div-4">
-                div-4
-            </div>
-
-            <div id="div-5-gallery">
-                div 1
-            </div>
-
-            <div id="div-6">
-                div2
-            </div>
-
-            <div id="div-7">
-                <div style="background-image: url('https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/01eaf52937a55d8e8d81acd2/pexelsphoto771742.jpeg');"><h2>photo1</h2></div>
-                <div style="background-image: url('https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/8e0c842e8a5b5b2c882bdd55/pexelsphoto1570779.jpeg');"><h2>photo2</h2></div>
-                <div class="side-image"><h2>photo3</h2></div>
-            </div>
-
-            <div id="div-8">
-                <div style="background-color: #7da2a9;"><h3>Questions</h3><h3>Questions</h3><h3>Questions</h3></div>
-                <div style="background-color: #18181e;"><h3>Questions</h3><h3>Questions</h3><h3>Questions</h3></div>
-            </div>
-
-            <div id="div-9">
-                <p>created by and copied from https://nicepage.com/website-builder-software/preview/school-of-artistic-education-34007?device=desktop</p>
-            </div>
-
         </div>
 
-    </main>
+        <div id="div-2-about">
+            <h2>CHILDREN'S<br>ART SCHOOL<br>ABOUT OUT SCHOOL</h2>
+        
+            <div><p>We are a leading artistic educational provider, offering in-depth learning opportunities for both students and teachers looking to develop their skills.<br> 
+            Key information about the University’s history, mission and values, governance and committees, affiliations and associations and official publications.</p>
+        </div>
+
+            
+        </div>
+
+        <div id="div-3-programs">
+            <div id="div-3-head">
+                <h3>ALL OUR PROGRAMS</h3>
+                <p>At The Marvegos Fine Art School we encourage creativity through art — making one’s own choices within a framework is the essence of creative choice.</p>
+            </div>
+
+            <div class="div-3-pitems">
+
+                <div class="div-3-pitems-box">
+                    <img src="" height="100" cols="100" alt="logo">
+                    <h4>Art Exploration</h4>
+                    <p>Our approach to art making for preschoolers and younger kids is age appropriate and fun.</p>
+                </div>
+                
+                <div class="div-3-pitems-box">
+                    <img src="" height="100" cols="100" alt="logo">
+                    <h4>Art Exploration</h4>
+                    <p>Our approach to art making for preschoolers and younger kids is age appropriate and fun.</p>
+                </div>
+
+                <div class="div-3-pitems-box">
+                    <img src="" height="100" cols="100" alt="logo">
+                    <h4>Art Exploration</h4>
+                    <p>Our approach to art making for preschoolers and younger kids is age appropriate and fun.</p>
+                </div>
+
+                <div class="div-3-pitems-box">
+                    <img src="" height="100" cols="100" alt="logo">
+                    <h4>Art Exploration</h4>
+                    <p>Our approach to art making for preschoolers and younger kids is age appropriate and fun.</p>
+                </div>
+
+                <div class="div-3-pitems-box">
+                    <img src="" height="100" cols="100" alt="logo">
+                    <h4>Art Exploration</h4>
+                    <p>Our approach to art making for preschoolers and younger kids is age appropriate and fun.</p>
+                </div>
+
+                <div class="div-3-pitems-box">
+                    <img src="" height="100" cols="100" alt="logo">
+                    <h4>Art Exploration</h4>
+                    <p>Our approach to art making for preschoolers and younger kids is age appropriate and fun.</p>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div id="div-4">
+            div-4
+        </div>
+
+        <div id="div-5-gallery">
+            div 1
+        </div>
+
+        <div id="div-6">
+            div2
+        </div>
+
+        <div id="div-7">
+            <div style="background-image: url('https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/01eaf52937a55d8e8d81acd2/pexelsphoto771742.jpeg');"><h2>photo1</h2></div>
+            <div style="background-image: url('https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/8e0c842e8a5b5b2c882bdd55/pexelsphoto1570779.jpeg');"><h2>photo2</h2></div>
+            <div class="side-image"><h2>photo3</h2></div>
+        </div>
+
+        <div id="div-8">
+            <div style="background-color: #7da2a9;"><h3>Questions</h3><h3>Questions</h3><h3>Questions</h3></div>
+            <div style="background-color: #18181e;"><h3>Questions</h3><h3>Questions</h3><h3>Questions</h3></div>
+        </div>
+
+        <div id="div-9">
+            <p>created by and copied from https://nicepage.com/website-builder-software/preview/school-of-artistic-education-34007?device=desktop</p>
+        </div>
+
+    </div>
+
 
 
 </body>
