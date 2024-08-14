@@ -43,6 +43,7 @@ let dayNumber = 3;
 
 switch (dayNumber) {
     case 1:
+        var a = 'something'
         dayName = 'Monday';
         break;
 
@@ -102,11 +103,56 @@ function sum_r(a,b){
 sum_r(2,3)
 
 let result = sum_r(5,5);
-console.log(result)
+// console.log(result)
 
 
 const add = (a,b)=>a+b;
-console.log(add(2,2))
+// console.log(add(2,2))
+
+// console.log(a)
+
+// var is a global scope but in function it is local scope, and in the function it has global scope
+
+
+var a = 20;
+
+{
+    let a = 'toheed';
+    // console.log(a)
+}
+
+// console.log(a)
+
+
+//  array and objects
+
+let arr = [10,20,30,40,50]
+// console.log(arr[arr.length-1])
+
+arr[7] = 'Techno'
+// console.log(arr[5], arr[7])
+
+let nestedArr = [10,20,30, [1,2,3,4,], [20,30,40,["aaa", "aab", [true,false]]]];
+a = nestedArr[nestedArr.length-1]
+b = a[a.length-1]
+c = b[b.length-1]
+// console.log(nestedArr[nestedArr.length-1][nestedArr[nestedArr.length-1]])
+
+// objects - collection of key value pairs
+
+let obj = {
+    "firstName" : 'Toheed',         // string is a valid key
+    lastName : 'Akhtar'
+}
+obj.firstName = 'Tohe2d'
+obj.section = 'TR4'
+
+let firstName = 'section'
+
+let keyname = 'address';
+obj[keyname] = 'udaipur'
+
+console.log(obj)        // key should be given in string
 
 
 
