@@ -1,3 +1,4 @@
+
 console.log('Hello World')
 
 //  datatype -> Primitive , Reference
@@ -55,7 +56,7 @@ var arr = [1 , 2 , 'string', undefined, [1 , 'string1', undefined]]
 // console.log(typeof arr)
 
 var date = new Date();
-// console.log(date)
+console.log(date)
 // console.log(typeof date)
 
 // var b = null
@@ -92,7 +93,7 @@ x %= 20
 
 console.log(x)
 
- 
+
 // comparison operator
 
 let num1 = 50;
@@ -112,4 +113,5 @@ let isAdmin = 20;
 
 console.log(isLoggedin && isAdmin)
 console.log(isLoggedin || isAdmin)
+
 
