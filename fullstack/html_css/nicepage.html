@@ -38,7 +38,7 @@
         #div-1{
             background-image: url(https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/311ebf9ec39a5c1f8b8241af/pexelsphoto1927507.jpeg);
             background-size: cover;
-            background-position: center;
+            background-position: center center;
             color: white;
             font-family: sans-serif;
         }
@@ -195,21 +195,57 @@
             grid-template-columns: 33vw 33vw 33vw;
         }
 
-        .side-image {
-            background-image: url('https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/aaba845edc7551f0bcfd5265/pexelsphoto925743.jpeg'); 
-            object-fit: cover;
-            background-position: 7% -88%;
-        }
 
         #div-8{
             display: grid;
             grid-template-columns: 50vw 50vw;
         }
 
+        #div-8-1{        
+            background-color: #7da2a9;
+            color: white;
+        }
+
+        #div-8-1{
+            padding: 100px 4vw;
+        }
+
+        #div-8-1-items > span , p{
+            padding: 20px 0;
+        }
+
+        #div-8-1-p2{
+            display: flex;
+            flex-direction: column;
+        }
+
+        #div-8-2{
+            background-color: #18181e;
+            padding: 10px 0;
+        }
+        
+        #div-8-2-items{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 150px 10vw;
+        }
+
+        #div-8-2-items > input, button, textarea {
+            margin: 10px 0;
+            padding: 1vh 5px;
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+        }
+
         #div-9 {
             background-color: #333333;
             color: white;
-            text-align: center;
+            /* text-align: center; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
     </style>
@@ -337,15 +373,39 @@
         </div>
 
 
-
-
         <div id="div-8">
-            <div style="background-color: #7da2a9;"><h3>Questions</h3><h3>Questions</h3><h3>Questions</h3></div>
-            <div style="background-color: #18181e;"><h3>Questions</h3><h3>Questions</h3><h3>Questions</h3></div>
+            <div id="div-8-1">
+                <div id="div-8-1-items">
+                    <span><h1>Questions?</h1></span>
+                    <span><h1>Comments?</h1></span>
+                    <span><h1>WE'D LOVE TO HEAR FROM YOU.</h1></span>
+                    
+                    <p>The school is open 10:00am to 5:00pm Tuesday to Friday and 10:00am to 3:00pm on Saturday. During July and August Summer Camps, we're open from Monday to Friday 8:30am to 4:30pm</p>
+
+                    <p id="div-8-1-p2">
+                        <span>Our mailing address is:</span>
+                        <span>152A Charlotte Street,</span>
+                        <span>Peterborough ON</span>
+                        <span>Phone: 705-742-3221</span>
+                    </p>
+
+                </div>
+            </div>
+            
+            
+
+            <div id="div-8-2">
+                <div id="div-8-2-items">
+                    <input type="text" placeholder="Enter your Name">
+                    <input type="email" placeholder="Enter a valid email address">
+                    <textarea placeholder="Enter your message"></textarea>
+                    <button type="submit">Submit</button>
+                </div>
+            </div>  
         </div>
 
         <div id="div-9">
-            <p>created by and copied from https://nicepage.com/website-builder-software/preview/school-of-artistic-education-34007?device=desktop</p>
+            <p>created by Toheed ; copied from https://nicepage.com/website-builder-software/preview/school-of-artistic-education-34007?device=desktop</p>
         </div>
 
     </div>
