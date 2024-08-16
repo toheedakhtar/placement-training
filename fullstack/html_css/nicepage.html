@@ -32,7 +32,7 @@
             width: 100vw;
             display: grid;
             height: 90vh;
-            grid-template-rows: 750px 400px 800px 500px 800px 400px 500px 600px 100px;
+            grid-template-rows: 750px 400px 900px 500px 1200px 400px 500px 600px 100px;
         }
 
         #div-1{
@@ -115,15 +115,79 @@
         #div-4-image{
             margin: 4vh 2vw 4vh 11vw;
             background-image: url(https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/d3438a56c00250bcb4407921/pexelsphoto207732.jpeg);
+            background-position: center center;
+            background-size: cover;
         }
 
         #div-4-text {
             margin: 14vh 15vw 0vw 0vw;
         }
 
-        #div-6-images{
+        #div-5-images{
             display: grid;
             grid-template-columns: repeat(2, 0.5fr);
+            height: 1000px;
+            justify-content: center;
+            padding: 0 25vw;
+        }
+
+        #div-5-1{
+            /* background-color: red; */
+            background-image: url(https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/1da4bf9f59e45dc9b3757a0f/pexelsphoto297494.jpeg);
+            background-position: center center;
+            background-size: cover;
+
+        }
+
+        #div-5-2{
+            background-image: url(https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/85a4d8c46ac95393a3d0dad8/pexelsphoto889839.jpeg);
+            background-position: center center;
+            background-size: cover;
+        }
+
+        #div-5-3{
+            background-image: url(https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/57819edb84b95a0abd638aca/pexelsphoto587958.jpeg);
+            background-position: center center;
+            background-size: cover;
+        }
+
+        #div-5-4{
+            background-image: url(https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/ba08b6c43553563caf28cafa/pexelsphoto1572386.jpeg);
+            background-position: center center;
+            background-size: cover;
+        }
+
+        #div-5-5{
+            background-image: url(https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/5c63e6dcd4cd57b99e117388/pexelsphoto.jpg);
+            background-position: center center;
+            background-size: cover;
+        }
+
+        #div-5-6{
+            background-image: url(https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/f4b70b0d58b75cb8aef3eafc/pexelsphoto1988681.jpeg);
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .div-5-imgc{
+            margin: 10px;
+        }
+
+        .div-6-text{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 170px;
+            font-size: x-large;
+            color: white;
+
+            
+        }
+
+        .div-6-span{
+            display: flex;
+            flex-direction: column;
+            padding: 5px 0;
         }
 
         #div-7{
@@ -247,25 +311,33 @@
                 <p>The Art Education Section aims at teaching art and spreading interest in art among different age groups. This is achieved through diverse trainings and workshops for different categories.</p>
             </div>
 
-            <div id="div-6-images">
-                <div>Image 1</div>
-                <div>Image 2</div>
-                <div>Image 3</div>
-                <div>Image 4</div>
-                <div>Image 5</div>
-                <div>Image 6</div>
+            <div id="div-5-images">
+                <div class="div-5-imgc" id="div-5-1"></div>
+                <div class="div-5-imgc" id="div-5-2"></div>
+                <div class="div-5-imgc" id="div-5-3"></div>
+                <div class="div-5-imgc" id="div-5-4"></div>
+                <div class="div-5-imgc" id="div-5-5"></div>
+                <div class="div-5-imgc" id="div-5-6"></div>
             </div>
         </div>
 
         <div id="div-6">
-            div2
+            <div class="div-6-text">
+                <div><span class="div-6-span"><h4>5K</h4></span><span class="div-6-span">STUDENTS</span></div>
+                <div><span class="div-6-span"><h4>150</h4></span><span class="div-6-span">TEACHERS</span></div>
+                <div><span class="div-6-span"><h4>45</h4></span><span class="div-6-span">WINNERS</span></div>
+                <div><span class="div-6-span"><h4>250</h4></span><span class="div-6-span">AWARDS</span></div>
+            </div>
         </div>
 
         <div id="div-7">
-            <div style="background-image: url('https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/01eaf52937a55d8e8d81acd2/pexelsphoto771742.jpeg');"><h2>photo1</h2></div>
-            <div style="background-image: url('https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/8e0c842e8a5b5b2c882bdd55/pexelsphoto1570779.jpeg');"><h2>photo2</h2></div>
-            <div class="side-image"><h2>photo3</h2></div>
+            <div style="background-image: url('https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/01eaf52937a55d8e8d81acd2/pexelsphoto771742.jpeg'); background-size: cover;"><h2></h2></div>
+            <div style="background-image: url('https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/8e0c842e8a5b5b2c882bdd55/pexelsphoto1570779.jpeg'); background-size: cover;"><h2></h2></div>
+            <div style="background-image: url('https://images03.nicepage.com/a1389d7bc73adea1e1c1fb7e/aaba845edc7551f0bcfd5265/pexelsphoto925743.jpeg'); background-size: cover; background-position: center center;"><h2></h2></div>
         </div>
+
+
+
 
         <div id="div-8">
             <div style="background-color: #7da2a9;"><h3>Questions</h3><h3>Questions</h3><h3>Questions</h3></div>
