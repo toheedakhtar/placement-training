@@ -45,6 +45,38 @@ console.log(values)
 let entries = Object.entries(obj)
 console.log(entries)
 
+Object.freeze(obj);     // makes the obj behaves like a constant
+
+obj.firstName = "naeem"
+console.log(obj)
+
+const num = {
+    firstName : "Toheed",
+    lastName : "akhtar"
+}
+
+num.firstName = "naeem"     // it will change as ut accesing key of an object, this is why freeze is used so that keys do not change.
+console.log(num)
+
+Object.seal(obj)        // exisiting properties keys can be changed, new properties can't be changed
+
+obj.firstName = 'Naeem';
+obj.location = 'Udaipur';
+console.log(obj)
+
+console.log(obj.hasOwnProperty('firstname'));
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
