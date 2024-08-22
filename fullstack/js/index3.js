@@ -50,7 +50,7 @@ let count = 20;
 
 // function sum(a,a){
 //     // "use strict"
-    
+
 //     console.log("sum func")
 // }
 
@@ -66,27 +66,27 @@ let count = 20;
 
 
 let person = {
-    name:"Toheed",
-    age:'20',
-    address : {
-        city : 'udaipur',
-        pinCode : '313002'
+    name: "Toheed",
+    age: '20',
+    address: {
+        city: 'udaipur',
+        pinCode: '313002'
     }
 }
 
 
 // console.dir(person)
 
-let data =  [
+let data = [
     {
-    name : 'Toheed', city:'udaipur', dept : 'DS'   
+        name: 'Toheed', city: 'udaipur', dept: 'DS'
     },
     {
-    name : 'AKHTAR', city:'udaipur', dept : 'DS'   
+        name: 'AKHTAR', city: 'udaipur', dept: 'DS'
 
     },
     {
-    name : 'Naeem', city:'udaipur', dept : 'DS'   
+        name: 'Naeem', city: 'udaipur', dept: 'DS'
     }
 ]
 
@@ -110,7 +110,7 @@ const ret = (a) => {
     console.log(a)
 }
 
-let arr = [10,20,30,40,50,60,70]
+let arr = [10, 20, 30, 40, 50, 60, 70]
 
 // push, pop, shift, unshift
 
@@ -133,8 +133,8 @@ arr.shift(1000)
 // console.log(arr)
 
 // concat
-let arr1 = [10,20]
-let arr2 = [30,40]
+let arr1 = [10, 20]
+let arr2 = [30, 40]
 
 // console.log(arr1.concat(arr2))
 
@@ -142,11 +142,11 @@ let arr2 = [30,40]
 //  slice -> shallow copy of elements
 //  splice -> operations on array itself
 
-let arrn = [10,20,30,40,50,60]
+let arrn = [10, 20, 30, 40, 50, 60]
 // arrn.slice(2);
 console.log('slice(2)', arrn.slice(2))
 console.log(arrn)
-console.log('splice(2)', arrn.splice(2, 2 , 5, 4))
+console.log('splice(2)', arrn.splice(2, 2, 5, 4))
 console.log(arrn)
 
 
