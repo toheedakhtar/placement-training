@@ -86,26 +86,86 @@
 
 // -------- destrcuting -----------------
 
-let arr = [10,20,30,40,50,60]
+// let arr = [10,20,30,40,50,60]
 
-const [n1 , ,n2, ...n3] = arr      // keyname should not matter
-console.log(n1, n2, n3)            // .... is rest operator
-console.log(arr)
+// const [n1 , ,n2, ...n3] = arr      // keyname should not matter
+// console.log(n1, n2, n3)            // .... is rest operator
+// console.log(arr)
 
 
 //  obj destructing
 
-let obj = {
-    firstName : 'Toheed',
-    lastName : 'Akhtar',
-    address : 'udaipur',
-    gender : 'Male'
+// let obj = {
+//     firstName : 'Toheed',
+//     lastName : 'Akhtar',
+//     address : 'udaipur',
+//     gender : 'Male'
+// }
+
+// gender = 'male'
+// let {firstName, lastName, address, gender:a, age=20} = obj;       // keyname should be same as in object
+// console.log(firstName, lastName, address, a)
+// console.log(age)
+
+// let arr1 = [1,2,3];
+// let arr2 = arr1;    // sames share address pointer , thus arr1 and arr2 are equal.
+
+// arr2.push(1000)
+// console.log(arr1)
+// console.log(arr2)
+// console.log(arr1 === arr2);
+
+// let num1 = 10;
+// let num2 = 10;
+// console.log(num1 === num2);
+
+// ----------------------------------------- spread operator
+
+// let arr1 = [10,20,30]
+// let arr2 = [...arr1]    // arr1 will not change on arr2
+
+// arr1.push(1000)
+// console.log(arr1)
+// console.log(arr2)
+// console.log(arr1 === arr2)
+
+
+// let arr1 = [10,20,30]
+// let arr2 = [30,40,50]
+
+// let arr3 = [...arr1, 1000 ,...arr2]   // prevents nested array and combines elements from both to one
+// console.log(arr3)
+
+
+let obj1 = {
+    firstName : 'TOheed',
+    lastName : 'akhtar'
 }
 
-gender = 'male'
-let {firstName, lastName, address, gender:a, age=20} = obj;       // keyname should be same as in object
-console.log(firstName, lastName, address, a)
-console.log(age)
+
+let obj2 = {
+    firstName : 'TOHEED',
+    addr : 'udaipur',
+    gender : 'male'
+}
+
+let obj3 = {...obj1 , ...obj2}
+console.log(obj3)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
