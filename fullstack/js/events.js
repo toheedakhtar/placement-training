@@ -75,19 +75,21 @@
 
 
 // Async JS
-
+// -------------------------------- how it workds -> Event loop ; for understanding
 // Timer func
-let interval = setInterval(()=>{    // executes continously, thus interval
-    console.log(Math.random());
-},2000);
 
-let timeOut = setTimeout(()=>{  // executes once thus, timeout
-    console.log("Hello Techno");
-},5000);
+// let interval = setInterval(()=>{    // executes continously, thus interval
+//     console.log(Math.random());
+// },2000);
 
-document.getElementById("button").addEventListener("click",function(){
-    console.log("Stop Button");
+// let timeOut = setTimeout(()=>{  // executes once thus, timeout
+//     console.log("Hello Techno");
+// },5000);
 
-    clearInterval(interval);
-    clearTimeout(timeOut);
-})
+// document.getElementById("button").addEventListener("click",function(){
+//     console.log("Stop Button");
+
+//     clearInterval(interval);
+//     clearTimeout(timeOut);
+// })
+
