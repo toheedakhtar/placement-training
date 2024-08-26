@@ -42,7 +42,7 @@
 //     })
 // })
 
-// --------------  PROMISES  ; launched in ES6 to tackle call back hell as it is complex , not scalable
+// -----------------------------------  PROMISES  ; launched in ES6 to tackle call back hell as it is complex , not scalable
 // - object which contains multiple values,
 // - either fullfillled or broken or in pending state,
 // - no data ingested - pending state
@@ -50,24 +50,93 @@
 // - some problem while getting data - pending state
 // - also a constrcutor func
 
+// function fetchData(){
+//     return new Promise((resolve, reject) => {       // new keyword for constructor
+//         setTimeout(()=>{
+//             try {
+//                 let data = {
+//                     firstName : 'Toheed',
+//                     lastName : 'Akhtar',
+//                 };
+//                 return resolve(data);
+//             }
+//             catch(error){
+//                return reject(error);
+//             }
+//         }, 2000);
+//     })
+// }
+// fetchedData = fetchData();
+// console.log(fetchedData);
+
+// fetchedData
+// // pending -> fullfileed 
+// .then((data) => {
+//     console.log(data)
+// })     // no semicolon (;)
+// // pending -> error
+// .catch((data) => {
+//     console.log(data);
+// })   
+
+
+
+
+//  fetchapi
+let fetchedDataObj;
+
 function fetchData(){
-    return new Promise((resolve, reject) => {       // new keyword for constructor
-        setTimeout(()=>{
-            try {
-                let data = {
-                    firstName : 'Toheed',
-                    lastName : 'Akhtar',
-                };
-                return resolve(data);
-            }
-            catch(error){
-                reject(error);
-            }
-        }, 2000);
-    })
+    let data = fetch('https://fakestoreapi.com/products');
+    console.log('Next step after fetching..!');         // this will run before fetch, this is bad!
+    return data;
 }
 
-console.log(fetchData());
+let fetchedData = fetchData();
+console.log(fetchedData);   // a promise
+
+fetchedData
+.then((res)=>{
+    // console.log(res.json())  
+    return res.json();      // is a promise -> to pass to next .then 
+})
+.then((data) => {
+    prodDiv = document.getElementById('products');
+    cardDiv = document.createElement("div");
+    
+    data.forEach(dataItem => {
+    cardDiv = document.createElement("div")
+    cardDiv.innerHTML = `
+    <h1>${dataItem.title}</h1>
+    <img src=${dataItem.image} width=300 height=300>
+    <h2>${dataItem.price}</h2>
+    <p>${dataItem.description}</p>
+    <p>${dataItem.category}</p>
+    <p>${dataItem.rating.rate}</p>`;
+    
+    cardDiv.className= "cards";
+    prodDiv.append(cardDiv);
+
+});
+})
+.catch((err)=> {
+    console.log(err)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
