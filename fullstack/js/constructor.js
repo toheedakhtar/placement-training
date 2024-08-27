@@ -64,19 +64,70 @@
 
 
 //  --------------------------- CLASSES
-class Person{
-    constructor(name, age){
-        this.name = name;
-        this.age = age;
+// class Person{
+//     constructor(name, age){
+//         this.name = name;
+//         this.age = age;
+//     }
+
+//     greet(){    // does'nt need function declaration.
+//         console.log(`Hello my username is ${this.name} and my age is ${this.age}`);
+//     }
+// }
+
+// let person1 = new Person("Toheed", 'ab');
+// console.log(person1)
+// person1.greet()
+
+// ---------- INHERITANCE
+// class Animal{
+//     constructor(name, age){
+//         this.name = name;
+//     }
+
+//     speak(){    // does'nt need function declaration.
+//         console.log(`${this.name} makes noise`);
+//     }
+
+// }
+
+// class Dog extends Animal{
+//     constructor(name){
+//         super(name);
+//     }
+
+//     speak(){
+//         console.log(`${this.name} Barks`)
+//     }
+// }
+
+// const animal1 = new Animal('dog')
+// const animal2 = new Dog('dog')
+
+// console.log(animal1)
+// console.log(animal2);
+// animal1.speak()
+// animal2.speak()
+
+//  -------- private variables
+
+class BankAccount{
+    #balance = 0;       // # shows private varibles, _ shows protected variables
+
+    constructor(owner){
+        // this._owner = owner
+        let _owner = owner;
+        this.get_owner_name = () => owner
     }
 
-    greet(){    // does'nt need function declaration.
-        console.log(`Hello my username is ${this.name} and my age is ${this.age}`);
+    deposite(amount){
+        this.#balance += amount;
+        console.log(`${this.owner} deposited ${amount}, Current Balance ${this.#balance}`);
     }
 }
 
-let person1 = new Person("Toheed", 'ab');
-console.log(person1)
-person1.greet()
-
+const customer1 = new BankAccount('Toheed');
+console.log(customer1.deposite(1000))
+// console.log(customer1.#balance))         // can't do this ; private variables
+console.log(customer1.get_owner_name())
 
