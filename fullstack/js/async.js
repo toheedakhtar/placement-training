@@ -150,8 +150,7 @@ console.log(data);
 //     let data = await res.json();
 //     console.log(data)
 //     return data;
-// }
-
+// } 
 // console.log(fetchData)
 
 
