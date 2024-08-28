@@ -1,0 +1,5 @@
+npm - node package manager,
+	- installs pakceges from cloud
+node runs the packages,
+
+if react is reloading it indicates a problem.
