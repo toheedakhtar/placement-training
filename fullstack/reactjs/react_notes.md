@@ -64,3 +64,14 @@ useEffect(() => {
 
 <p>{counter}</p> 
 ```
+[w3 link - useEffect](https://www.w3schools.com/react/react_useeffect.asp)
+
+## 3. useContext : helps avoid prop-drilling
+
+prop-drilling : Prop drilling occurs when prop needs to be passed through multiple components to reach a deeply nested child component that actually needs the prop.
+
+- allows to pass data/context without props, through context API,
+- create a folder context/filename.js/jsx in src,
+- now wrap the components you want to pass the context to under `<contextname.Provider value={your_context}>`
+- you can use useContext(imported_context_from_context/file) to pass/call values, avoiding prop drilling,
+
