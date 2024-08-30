@@ -3,10 +3,10 @@
 
 # Hooks : 
 ## 1. useState(var, func) : used to dynamically change state on UI / to manipulate UI,
-	- ex : counter 
-	- const [count, setCount] = useState(0)	 --> useState(default value)
-	- count is the variable and setCount function will change the counts.
-	- ex :
+- ex : counter 
+- const [count, setCount] = useState(0)	 --> useState(default value)
+- count is the variable and setCount function will change the counts.
+- ex :
 ``` 
 counter = 0
 const setCounter = () => {
@@ -18,13 +18,13 @@ const setCounter = () => {
 [W3 link](https://www.w3schools.com/react/react_usestate.asp)
 
 ## 2. useEffect(func, dependencies) : used to perform side effects on components such as fetching data, updating DOM, timers. It runs on every renders of dependencies.
-	- ex : counter
-	- useEffect((func)[dependecies]); --> [dependencies]
-	- on a change in dependecy (render), useEffect funtion will run.
-	- 3 steps/cycle in useEffect :
-		- on initial,
-		- state change
-		- cleanup --> by using render
+- ex : counter
+- useEffect((func)[dependecies]); --> [dependencies]
+- on a change in dependecy (render), useEffect funtion will run.
+- 3 steps/cycle in useEffect :
+	- on initial,
+	- state change
+	- cleanup --> by using render
 ```
 const [count, setCount] = useState(0);
 
