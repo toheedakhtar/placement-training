@@ -75,3 +75,8 @@ prop-drilling : Prop drilling occurs when prop needs to be passed through multip
 - now wrap the components you want to pass the context to under `<contextname.Provider value={your_context}>`
 - you can use useContext(imported_context_from_context/file) to pass/call values, avoiding prop drilling,
 
+## 4. useRef()
+- can be passed to ref in input
+- returns the component, though which you can get the Value,
+
+
