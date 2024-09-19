@@ -1,4 +1,5 @@
 const User = require("../model/user")
+const bcrypt = require("bcrypt")
 
 exports.signup = async (req,res)=>{
     try {
@@ -7,17 +8,15 @@ exports.signup = async (req,res)=>{
         if(isExisting){
             return res.status(400).send({message  : "User Already Exist"});
         }
-
-        const newUser = new User({name : name , email : email , password : password , phoneNumber  : phoneNumber});
-
+        
+        const newUser = new User({name : name , email : email , password : password, phoneNumber  : phoneNumber});
+        console.log('hello')
+        
         await newUser.save();
+
         res.status(201).send({message : "Account created"});
     } catch (error) {
-        if(error.name === "ValidationError"){
-            const errors = Object.values(error.errors).map(error => error.message);
-            return res.status(400).json({message : "Validation Error",  error : errors});
-        }
-        res.status(500).send(error);
+        next(error)
     }
 }
 
@@ -29,8 +28,8 @@ exports.login = async (req, res) => {
         if (!isExisting){
             return res.status(400).send({message : "User not found"})
         };
-
-        const isMatched = password === isExisting.password;
+        
+        const isMatched = await bcrypt.compare(password, isExisting.password);
 
         if (!isMatched){
             return res.status(401).send({message : "Wrong Password"})
