@@ -1,6 +1,25 @@
 var http = require('http');
 
+
 const server = http.createServer((req, res)=>{
+    
+    let storedData;
+    if(req.method === 'POST'){
+        let body = "";
+        console.log("post method initiated.....")
+        req.on("data",(chunk)=>{
+                body += chunk.toString();
+        })
+
+        req.on("end", ()=>{
+            console.log('Begin parsing data.......')
+            // storedData = JSON.parse(body);  // string to object
+            console.log("body :" , body)
+            res.end('POST API CALL')
+        })
+
+    }
+
     if (req.url == '/'){
         res.end('Home Page');
         event.emit("homePageAccessed")
@@ -32,9 +51,9 @@ server.on("connection", (socket)=>{
     console.log('connection')
 })
 
-server.on("close", ()=>{
-    console.log("Server closed")
-})
+// server.on("close", ()=>{
+//     console.log("Server closed")
+// })
 
 
 const EventEimtter = require("events");
