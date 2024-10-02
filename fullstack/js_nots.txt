@@ -3,3 +3,25 @@ npm - node package manager,
 node runs the packages,
 
 if react is reloading it indicates a problem.
+
+redux and context api - to reduce api calls/ requests as they are considered to be expensive.
+
+redux terms 
+
+1. store - file/obj which contains all the states of the application.
+2. reducers - functions which provides access to previous state and permission to mutate them.
+3. actions - obj to do some action (update, decrease)
+4. dispatch - takes action to the place it needs to go to manipulate data
+5. selectors - gets data from the store. (Gives info of all reducers)
+
+jwt and jwt_decode (npm packages)
+for authenticated users.
+
+
+node - enviorment
+express - node lib/frame
+react - library
+nextjs - framework / improved version of reactjs
+
+client render - render the bundle on browser,
+server render - render the components on server itself, 
