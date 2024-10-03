@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const bcrypt = require('bcrypt')
 const validator = require('validator')
 
 const userSchema = mongoose.Schema({
@@ -9,7 +10,7 @@ const userSchema = mongoose.Schema({
         maxlength:[50, "Name cannot exceed 50 characters"],
         validate:{
             validator : function(value){
-                return validator.isAlpha(value, "en-US")
+                return validator.isAlpha(value, "en-US", {ignore:" "})
             },
             message : "name should be in string"
         }
@@ -54,6 +55,15 @@ const userSchema = mongoose.Schema({
             message : "Phone number should be valid"
         }
     }
+})
+
+userSchema.pre("save", async function(next){
+    const user = this;
+    // check for updation
+    if(user.isModified("password")) return next();
+    const hashedPassword = await bcrypt.hash(user.password, 10);
+    user.password = hashedPassword;
+    next();
 })
 
 module.exports = mongoose.model("User", userSchema)
