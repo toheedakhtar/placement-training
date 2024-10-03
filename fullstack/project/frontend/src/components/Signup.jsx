@@ -1,7 +1,10 @@
+import axios from 'axios';
 import { zodResolver } from '@hookform/resolvers/zod';
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form';
+import { useDispatch } from 'react-redux';
 import {z} from 'zod';
+import { setError, setLoading, setSucces, signup } from '../redux/slices/authSlice';
 
 const Signup = () => {
     // const [formData, setFormData] = useState({});
@@ -20,8 +23,21 @@ const Signup = () => {
         resolver: zodResolver(validationSchema)
     });
 
-    const onSubmit = (data) => {
-        console.log(data)
+    const dispatch = useDispatch();
+
+    // console.log(errors)
+    const onSubmit = async (data) => {
+        dispatch(signup())
+        // dispatch(setLoading())
+        // try{
+        //     const response = await axios.post('http://localhost:5000/auth/signup', data)
+        //     // console.log(response)
+        //     dispatch(setSucces(response.data.data))
+        // }
+        // catch(error){
+        //     dispatch(setError(error.response.data || "Internal Server Error"))
+        // }
+
     }
 
   return (

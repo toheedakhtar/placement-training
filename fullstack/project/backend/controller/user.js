@@ -17,10 +17,10 @@ exports.signup = async (req,res,next) => {
 
         const newUser = new User({name : name, email:email, password:password, phoneNumber:phoneNumber});
 
-        console.log('hello')
+        // console.log('hello')
 
         await newUser.save();
-        res.status(201).send({message:"Account Created"});
+        res.status(201).send({message:"Account Created", data:newUser});
 
     } catch (error) {
         // console.log(error.name)
