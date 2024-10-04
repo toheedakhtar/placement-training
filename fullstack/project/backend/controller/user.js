@@ -1,5 +1,7 @@
 const User = require('../model/user')
 const bcrypt = require("bcrypt")
+const jwt = require('jsonwebtoken')
+
 
 exports.signup = async (req,res,next) => {
     try {
@@ -48,7 +50,9 @@ exports.login = async (req, res, next) => {
             throw error;
         }
 
-        res.status(200).send({message: "User logged In", data: isExisting})
+        const token = jwt.sign({id : isExisting._id, email: isExisting.email, role:isExisting.role}, "your_jwt_secret", {expiresIn : "1h"})
+
+        res.status(200).send({message: "User logged In", data: isExisting, token:token})
 
     } catch (error) {
         next(error)
