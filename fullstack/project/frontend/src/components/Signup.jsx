@@ -1,10 +1,9 @@
-import axios from 'axios';
 import { zodResolver } from '@hookform/resolvers/zod';
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { useDispatch } from 'react-redux';
 import {z} from 'zod';
-import { setError, setLoading, setSucces, signup } from '../redux/slices/authSlice';
+import {signup } from '../redux/slices/authSlice';
 
 const Signup = () => {
     // const [formData, setFormData] = useState({});
@@ -27,7 +26,7 @@ const Signup = () => {
 
     // console.log(errors)
     const onSubmit = async (data) => {
-        dispatch(signup())
+        dispatch(signup(data))
         // dispatch(setLoading())
         // try{
         //     const response = await axios.post('http://localhost:5000/auth/signup', data)
