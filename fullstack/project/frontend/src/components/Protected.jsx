@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import { Outlet, useNavigate } from 'react-router-dom';
+import Navbar from './Navbar';
 
 const Protected = ({allowedRole}) => {
   const { isAuth, role } = useSelector((state)=>state.auth);
@@ -19,6 +20,7 @@ const Protected = ({allowedRole}) => {
 
   return (
     <div>
+      <Navbar />
       <Outlet />
     </div>
   )
