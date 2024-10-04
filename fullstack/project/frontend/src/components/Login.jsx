@@ -42,6 +42,9 @@ const Login = () => {
       }
     },[isAuth]);
 
+    const handleGoogleLogin = () => {
+        window.location.href = 'http://localhost:5000/api/auth/google'
+    }
 
   return (
     <div className='w-4/5 h-4/5 flex justify-center items-center bg-white shadow-2xl rounded'>
@@ -49,7 +52,7 @@ const Login = () => {
         <img src='https://cdni.iconscout.com/illustration/premium/thumb/sign-up-illustration-download-in-svg-png-gif-file-formats--new-user-registering-log-register-form-maggy-pack-design-development-illustrations-4097209.png' alt='' className='w-full'/>
         </div>
         <div className='w-1/2 flex flex-col gap-8'>
-        <h1 className='text-3xl text-blue-500 font-semibold text-center'>Welcome ! Log-In </h1>
+            <h1 className='text-3xl text-blue-500 font-semibold text-center'>Welcome ! Log-In </h1>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className='grid grid-cols-2 gap-3'>
 
@@ -66,8 +69,9 @@ const Login = () => {
                     </div>
 
                 </div>
-                <button className='bg-blue-500  active:bg-blue-600 p-2 font-medium w-[95%] my-5 shadow-xl rounded'>Sign-Up</button>
+                <button className='bg-blue-500  active:bg-blue-600 p-2 font-medium w-[95%] my-5 shadow-xl rounded'>Log-In</button>
             </form>
+            <button className='bg-red-500 my-5 text-white font-medium p-2 w-[90%] shadow-xl rounded active:bg-red-600' onClick={handleGoogleLogin}>Log-in with Google</button>
         </div>
 
     </div>

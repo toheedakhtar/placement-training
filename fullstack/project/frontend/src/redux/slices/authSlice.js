@@ -48,6 +48,12 @@ const authSlice = createSlice({
             localStorage.removeItem("token")
             state.isAuth = false
             state.role = null
+        },
+        loginWithGoogle : (state, action)=> {
+            localStorage.setItem("token", action.payload.token);
+            state.user = action.payload.user,
+            state.role = action.payload.role,
+            state.isAuth = true
         }
 
         // setLoading : (state) => {
@@ -94,7 +100,7 @@ const authSlice = createSlice({
     }
 })
 
-export const { logOut } = authSlice.actions;
+export const { logOut, loginWithGoogle } = authSlice.actions;
 
 // export const signup = (data) => {
 //     return async (dispatch) => {

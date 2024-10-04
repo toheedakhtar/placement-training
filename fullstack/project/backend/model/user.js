@@ -34,15 +34,12 @@ const userSchema = mongoose.Schema({
     password:{
         type: String,
         required : function(){
-            return !this.google
+            return !this.googleId
         },
-        minlength :[8, "must be 8 char long"],
         maxlength :[128, 'must be less than 128 char'],
         validate : {
             validator : function(value){
-                if(this.googleId){
-                    return true;
-                }
+                if(this.googleId) return true;
                 return validator.isStrongPassword(value,{
                     minLength:8, 
                     minLowercase: 1,
@@ -56,9 +53,12 @@ const userSchema = mongoose.Schema({
     },
     phoneNumber : {
         type:String,
-        required : [true, "Phone number is required"],
+        required : function(){
+            return !this.googleId
+        },
         validate : {
             validator : function(value){
+                if(this.googleId) return true
                 return validator.isMobilePhone(value, 'en-IN')
             },
             message : "Phone number should be valid"
@@ -77,7 +77,7 @@ userSchema.pre("save", async function(next){
         const user = this;
         // check for updation
         if(!user.isModified("password") || user.googleId) return next();
-        const hashedPassword = await bcrypt.hash(user.password, 10);
+        const hashedPassword = await bcrypt.hash(user.password, 12);
         user.password = hashedPassword;
         next();
     } catch (error){

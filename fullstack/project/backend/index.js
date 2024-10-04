@@ -11,8 +11,8 @@ require('./config/passport')
 
 const app = express()
 
-app.use(passport.session({
-    secret : "your+secret_key",
+app.use(session({
+    secret : "Your+secret_key",
     resave:false,
     saveUninitialized : false,
     cookie : { secure : false }

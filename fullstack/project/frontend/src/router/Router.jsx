@@ -14,6 +14,7 @@ import AdminProduct from '../components/AdminProduct';
 import AdminOrder from '../components/AdminOrder';
 import Profile from '../components/Profile';
 import OpenRoutes from '../components/OpenRoutes';
+import GoogleAuth from '../components/GoogleAuth';
 
 const Router = createBrowserRouter([
     {
@@ -27,6 +28,10 @@ const Router = createBrowserRouter([
                 path : '/cart',
                 element: <Cart />
             },
+            {
+                path:'/googleauth',
+                element: <GoogleAuth />
+            }
         ]
     },
     {
