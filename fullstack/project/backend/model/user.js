@@ -3,6 +3,10 @@ const bcrypt = require('bcrypt')
 const validator = require('validator')
 
 const userSchema = mongoose.Schema({
+    googleId : {
+        type : String,
+        default : null
+    },
     name :{
         type : String,
         required : [true, "Name is required"],
@@ -29,11 +33,16 @@ const userSchema = mongoose.Schema({
     },
     password:{
         type: String,
-        required : [true, "Password is required"],
+        required : function(){
+            return !this.google
+        },
         minlength :[8, "must be 8 char long"],
         maxlength :[128, 'must be less than 128 char'],
         validate : {
             validator : function(value){
+                if(this.googleId){
+                    return true;
+                }
                 return validator.isStrongPassword(value,{
                     minLength:8, 
                     minLowercase: 1,
@@ -67,7 +76,7 @@ userSchema.pre("save", async function(next){
     try {
         const user = this;
         // check for updation
-        if(!user.isModified("password")) return next();
+        if(!user.isModified("password") || user.googleId) return next();
         const hashedPassword = await bcrypt.hash(user.password, 10);
         user.password = hashedPassword;
         next();

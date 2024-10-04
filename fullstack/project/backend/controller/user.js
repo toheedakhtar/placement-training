@@ -50,7 +50,7 @@ exports.login = async (req, res, next) => {
             throw error;
         }
 
-        const token = jwt.sign({id : isExisting._id, email: isExisting.email, role:isExisting.role}, "your_jwt_secret", {expiresIn : "1h"})
+        const token = jwt.sign({id : isExisting._id, email: isExisting.email, role:isExisting.role}, process.env.JWT_SECRET, {expiresIn : "1h"})
 
         res.status(200).send({message: "User logged In", data: isExisting, token:token})
 
