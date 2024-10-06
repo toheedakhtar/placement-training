@@ -22,7 +22,9 @@ exports.createProduct = async (req,res,next)=>{
     }
 };
 exports.updateProduct = async (req,res,next)=>{
+
     const { id } = req.params;
+    console.log("id :", id)
     try {
         const isExisting = await Product.findById(id);
         if(!isExisting){

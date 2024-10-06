@@ -6,7 +6,6 @@ export const addProduct = createAsyncThunk(
     async (data , {rejectWithValue})=>{
         
         try {
-            console.log(data)
             const response = await axios.post("http://localhost:5000/api/product",data);
             return response;
         } catch (error) {
@@ -14,28 +13,34 @@ export const addProduct = createAsyncThunk(
         }
     }
 )
-// export const updateProduct = createAsyncThunk(
-//     'product/updateProduct',
-//     async (data , {rejectWithValue})=>{
-//         try {
-//             const response = await axios.put(`http://localhost:5000/api/product/${data._id}`,data);
-//         return response;
-//         } catch (error) {
-//             return rejectWithValue(error);
-//         }
-//     }
-// )
-// export const updateProductWithImage = createAsyncThunk(
-//     'product/updateProductWithImage',
-//     async (data , {rejectWithValue})=>{
-//         try {
-//             const response = await axios.put(`http://localhost:5000/api/productWithImage/${data.id}`,data.data);
-//         return response;
-//         } catch (error) {
-//             return rejectWithValue(error);
-//         }
-//     }
-// )
+
+export const updateProduct = createAsyncThunk(
+    'product/updateProduct',
+    async (data , {rejectWithValue})=>{
+
+        try {
+            const response = await axios.put(`http://localhost:5000/api/product/${data._id}`,data);
+            console.log(response)
+            return response;
+        } catch (error) {
+            // console.log(error)
+            return rejectWithValue(error);
+        }
+    }
+)
+
+export const updateProductWithImage = createAsyncThunk(
+    'product/updateProductWithImage',
+    async (data , {rejectWithValue})=>{
+        try {
+            const response = await axios.put(`http://localhost:5000/api/productWithImage/${data.id}`,data.data);
+        return response;
+        } catch (error) {
+            return rejectWithValue(error);
+        }
+    }
+)
+
 export const getAllProduct = createAsyncThunk(
     'product/getAllProduct',
     async (_ , {rejectWithValue})=>{
@@ -80,32 +85,32 @@ const productSlice = createSlice({
             state.isLoading = false,
             state.error = action.payload?.response?.data
         })
-        // .addCase(updateProduct.pending , (state)=>{
-        //     state.isProductAdded = false;
-        //     state.isLoading = true
-        // })
-        // .addCase(updateProduct.fulfilled , (state,action)=>{
-        //     state.isProductAdded = true;
-        //     state.isLoading = false;
-        //     state.error = null
-        // })
-        // .addCase(updateProduct.rejected , (state , action)=>{
-        //     state.isLoading = false,
-        //     state.error = action.payload?.response?.data
-        // })
-        // .addCase(updateProductWithImage.pending , (state)=>{
-        //     state.isProductAdded = false;
-        //     state.isLoading = true
-        // })
-        // .addCase(updateProductWithImage.fulfilled , (state,action)=>{
-        //     state.isProductAdded = true;
-        //     state.isLoading = false;
-        //     state.error = null
-        // })
-        // .addCase(updateProductWithImage.rejected , (state , action)=>{
-        //     state.isLoading = false,
-        //     state.error = action.payload?.response?.data
-        // })
+        .addCase(updateProduct.pending , (state)=>{
+            state.isProductAdded = false;
+            state.isLoading = true
+        })
+        .addCase(updateProduct.fulfilled , (state,action)=>{
+            state.isProductAdded = true;
+            state.isLoading = false;
+            state.error = null
+        })
+        .addCase(updateProduct.rejected , (state , action)=>{
+            state.isLoading = false,
+            state.error = action.payload?.response?.data
+        })
+        .addCase(updateProductWithImage.pending , (state)=>{
+            state.isProductAdded = false;
+            state.isLoading = true
+        })
+        .addCase(updateProductWithImage.fulfilled , (state,action)=>{
+            state.isProductAdded = true;
+            state.isLoading = false;
+            state.error = null
+        })
+        .addCase(updateProductWithImage.rejected , (state , action)=>{
+            state.isLoading = false,
+            state.error = action.payload?.response?.data
+        })
         .addCase(getAllProduct.pending , (state)=>{
             state.isLoading = true
         })
