@@ -59,6 +59,32 @@ exports.login = async (req, res, next) => {
     }
 }
 
+exports.getAllUsers = async (req,res,next)=>{
+    try {
+        const users = await User.find({role : "User"});
+        res.status(200).send({message : "User Fetched" , data : users});
+    } catch (error) {
+        next(error);
+    }
+}
+
+exports.updateUser = async(req,res,next)=>{
+    try {
+        const id = req.params.id;
+        const isExisting = await User.findById(id);
+        if(!isExisting){
+            const error = new Error("User not found");
+            error.name = "NotFound";
+            error.statusCode = 404;
+            throw error;
+        }
+
+        const updatedUser = await User.findByIdAndUpdate(id,req.body,{new : true});
+        res.status(202).send({message :  "User updated" , data : updatedUser});
+    } catch (error) {
+        next(error);
+    }
+}
 
 // let obj = {
 //     firstName : "shubham",

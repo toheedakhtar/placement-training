@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import { MdLogout } from "react-icons/md";
-import { logout } from '../redux/slices/authSlice';
+import { logOut } from '../redux/slices/authSlice';
 import { FaShoppingCart } from "react-icons/fa";
 import { RiLoginBoxFill } from "react-icons/ri";
 import { FaUserPlus } from "react-icons/fa6";
@@ -21,7 +21,7 @@ const Navbar = () => {
 
     const handleLogout = () => {
         localStorage.removeItem("token");
-        dispatch(logout());
+        dispatch(logOut());
     }
 
 

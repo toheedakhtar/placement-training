@@ -99,7 +99,7 @@ const authSlice = createSlice({
     }
 })
 
-export const { logout, loginWithGoogle } = authSlice.actions;
+export const { logOut, loginWithGoogle } = authSlice.actions;
 
 // export const signup = (data) => {
 //     return async (dispatch) => {
